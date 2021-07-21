@@ -1,0 +1,38 @@
+- name: Test Band
+  identifier: 7f082ad8-8ad8-4323-8dd9-9716c0fc60ff
+  url: https://kernvalley.us
+  genre:
+    - metal
+  image:
+    - "@type": ImageObject
+      url: https://cdn.kernvalley.us/img/raster/missing-image.png
+      width: 640
+      height: 480
+      encodingFormat: image/png
+  member:
+    - Chris Zuber
+  sameAs:
+    - https://www.facebook.com/KernValley.us/
+    - https://twitter.com/kern_valley
+    - https://instagram.com/kernvalley_us/
+    - https://www.linkedin.com/company/18644791/
+    - https://github.com/kernvalley
+- name: Second Band
+  identifier: 04754de2-1719-4332-80e3-bcc4d0727576
+  url: https://kernvalley.us
+  genre:
+    - metal
+  image:
+    - "@type": ImageObject
+      url: https://cdn.kernvalley.us/img/raster/missing-image.png
+      width: 640
+      height: 480
+      encodingFormat: image/png
+  member:
+    - Chris Zuber
+  sameAs:
+    - https://www.facebook.com/KernValley.us/
+    - https://twitter.com/kern_valley
+    - https://instagram.com/kernvalley_us/
+    - https://www.linkedin.com/company/18644791/
+    - https://github.com/kernvalley

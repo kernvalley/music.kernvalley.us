@@ -7,29 +7,15 @@ tags:
 - jekyll
 - pwa
 - github template repo
-prerender:
-- href: /posts/2019/10/29/test/
 ---
 <section class="pagination">
 	<div class="grid grid-gallery">
-		{% for post in paginator.posts %}
-			<div class="article-preview card shadow-dark">
-				{% include articles/post-preview.html post=post %}
-			</div>
+		{% for file in site.data.events %}
+			{% assign event=file[1] %}
+			{% assign location=site.data.places[event.location.source] | find: "identifier", event.location.identifier %}
+			{% assign organizer=site.data.places[event.organizer.source] | find: "identifier", event.organizer.identifier %}
+			{% assign performers=site.data.musicgroups | where_exp: "band", "event.performer contains band.identifier" %}
+			<pre><code id="testdata">{{ performers | jsonify }}</code></pre>
 		{% endfor %}
 	</div>
-	{% if paginator.previous_page or paginator.next_page %}
-		<footer class="paginate-nav">
-			{% if paginator.previous_page %}
-				<a href="{{ paginator.previous_page_path  }}" rel="prev" role="button" title="Previous page">
-					{% include common/icon.html icon='prev' %}
-				</a>
-			{% endif %}
-			{% if paginator.next_page %}
-				<a href="{{ paginator.next_page_path }}" role="button" rel="next" title="Next page">
-					{% include common/icon.html icon='next' %}
-				</a>
-			{% endif %}
-		</footer>
-	{% endif %}
 </section>

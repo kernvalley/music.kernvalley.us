@@ -1,0 +1,32 @@
+"@type": MusicEvent
+"@context": https://schema.org
+name: Test Event
+description: This is a simple test of music events
+startDate: 2021-07-21 18:00
+endDate: 2021-07-21 21:00
+eventAttendanceMode: EventAttendanceModeEnumeration
+eventStatus: EventScheduled
+isAccessibleForFree: false
+image:
+  - "@type": ImageObject
+    url: https://cdn.kernvalley.us/img/raster/missing-image.png
+    width: 640
+    height: 480
+    encodingFormat: image/png
+offers:
+  - name: Admission
+    price: 9.99
+    priceCurrency: USD
+organizer:
+  source: businesses
+  identifier: f8fe6bc9-1ed1-4ce7-9271-1ce73d81192b
+location:
+  source: restaurants
+  identifier: 4d866db2-c506-444b-aa3f-87b3dd86a204
+sponsor:
+  - source: businesses
+    identifier: f8fe6bc9-1ed1-4ce7-9271-1ce73d81192b
+performer:
+  - 7f082ad8-8ad8-4323-8dd9-9716c0fc60ff
+  - 04754de2-1719-4332-80e3-bcc4d0727576
+---

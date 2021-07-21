@@ -3,10 +3,8 @@ import 'https://cdn.kernvalley.us/js/std-js/shims.js';
 import 'https://cdn.kernvalley.us/js/std-js/theme-cookie.js';
 import 'https://cdn.kernvalley.us/components/share-button.js';
 import 'https://cdn.kernvalley.us/components/share-to-button/share-to-button.js';
-import 'https://cdn.kernvalley.us/components/slide-show/slide-show.js';
 import 'https://cdn.kernvalley.us/components/github/user.js';
 import 'https://cdn.kernvalley.us/components/current-year.js';
-import 'https://cdn.kernvalley.us/components/bacon-ipsum.js';
 import 'https://cdn.kernvalley.us/components/install/prompt.js';
 import 'https://cdn.kernvalley.us/components/ad/block.js';
 import 'https://cdn.kernvalley.us/components/app/list-button.js';
@@ -16,10 +14,9 @@ import { getCustomElement } from 'https://cdn.kernvalley.us/js/std-js/custom-ele
 import { debounce } from 'https://cdn.kernvalley.us/js/std-js/events.js';
 import { init } from 'https://cdn.kernvalley.us/js/std-js/data-handlers.js';
 import { importGa, externalHandler, telHandler, mailtoHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
-import { submitHandler } from './contact-demo.js';
 import { GA } from './consts.js';
 
-css([document.documentElement], { '--viewport-height': `${window.innerHeight}px`});
+css([document.documentElement], { '--viewport-height': `${window.innerHeight}px` });
 
 requestIdleCallback(() => {
 	on([window], {
@@ -62,10 +59,6 @@ Promise.all([
 	ready(),
 ]).then(([HTMLInstallPromptElement]) => {
 	init();
-
-	if (location.pathname.startsWith('/contact')) {
-		on('#contact-form', ['cubmit'], submitHandler);
-	}
 
 	on('#install-btn', ['click'], () => new HTMLInstallPromptElement().show())
 		.forEach(el => el.hidden = false);
